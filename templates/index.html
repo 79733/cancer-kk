@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./Css/index.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="houseContainer">
+      <div class="houseContainer_result">
+        <div class="image">
+          <h1>Breast Cancer Diagnosis</h1>
+        </div>
+        <form class="Form" action="http://127.0.0.1:5000/prediction" method="post">
+          <h1>Enter Detail</h1>
+          <div class="formInput">
+            <div class="formInput_container">
+              <p>Mean Radius:</p>
+              <input type="number" name="Mean_radius" placeholder="Mean_radius" step=0.0001 />
+            </div>
+            <div class="formInput_container">
+              <p>Mean_texture</p>
+              <input type="number" name="Mean_texture" placeholder="Mean_texture" step=0.0001/>
+            </div>
+            <div class="formInput_container">
+              <p>Mean_perimeter</p>
+              <input type="number"name="Mean_perimeter" placeholder="Mean_perimeter" step=0.0001/>
+            </div>
+            <div class="formInput_container">
+              <p>Mean Area</p>
+              <input type="number" name="Mean_area" placeholder="Mean_area" step=0.0001 />
+            </div>
+            <div class="formInput_container">
+              <p>Mean Smoothness</p>
+              <input type="number" name="Mean_smoothness" placeholder="Mean_smoothness" min="1" step=0.0001/>
+            </div>
+
+            <input type="submit">
+          </div>
+          prediction:{{output}}
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
